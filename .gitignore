@@ -6,8 +6,6 @@ dist/
 
 # dependencies
 node_modules/
-package-lock.json
-src/env.d.ts
 
 # logs
 npm-debug.log*
