@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./base-layout.astro";
 const { frontmatter } = Astro.props;
+import GithubIcon from "../components/github-icon.astro";
 ---
 <style>
 	pre {border-radius: 10px;}
@@ -9,7 +10,14 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout title={frontmatter.title}>
 	<div class="max-w-4xl mx-auto px-4 md:px-6 sm:px-4 xs:px-6 lg:px-0 xl:px-0 py-14 text-[#b1bac4] bg-[#0d1117]">
-		<h1 class="text-white text-4xl font-bold text-center pb-4">{frontmatter.title}</h1>
+		<h1 class="text-white text-4xl font-bold pb-4">{frontmatter.title}</h1>
+		<hr class="h-px border-0 bg-[#b1bac4]"/>
+
+		<button type="button" class="text-[#b1bac4] bg-[#24292F] hover:bg-[#0d1117]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-small rounded-lg text-xs px-1.5 py-1 text-center inline-flex items-center mb-4 mt-2">
+		<GithubIcon classmod="h-4 w-4 mr-2" pathfill="#b1bac4"/>
+		Edit on Github
+		</button>
+
 		<div class="post-content">
 			<slot/>
 		</div>
