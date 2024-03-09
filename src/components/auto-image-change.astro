@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import MePic01 from '../assets/IMG_1824.png';
+import MePic02 from '../assets/IMG_2306.png';
+import MePic03 from '../assets/IMG_2461.jpg';
+---
+
+<div class="slideshow-container flex justify-center mb-16">
+	<div class="mySlides">
+		<Image src={MePic01} class="rounded-full w-48 h-48 md:w-96 md:h-96" alt="David 1">
+	</div>
+
+	<div class="mySlides">
+		<Image src={MePic02} class="rounded-full w-48 h-48 md:w-96 md:h-96" alt="David 2">
+	</div>
+
+	<div class="mySlides">
+		<Image src={MePic03} class="rounded-full w-48 h-48 md:w-96 md:h-96" alt="David 3">
+	</div>
+</div>
+
+
+<script>
+	let slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}
+		slides[slideIndex-1].style.display = "block"; 
+		setTimeout(showSlides, 2000); // Change image every 2 seconds
+	}
+</script>
