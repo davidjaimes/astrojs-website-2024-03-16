@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./base-layout.astro";
 import Jumbotron from "../components/jumbotron.astro";
+import AutoImageChange from "../components/auto-image-change.astro";
 
 const posts = await Astro.glob('../pages/*.md');
 import Search from '../components/Search';
@@ -11,6 +12,7 @@ import {Content as IndexMarkdown} from "../components/index.md";
 <BaseLayout title="Home">
     <div class="max-w-4xl mx-auto px-4 md:px-6 sm:px-4 xs:px-6 lg:px-0 xl:px-0 pb-14">
 		<Jumbotron/>
+		<AutoImageChange />
 		<Search client:load searchList={posts} class="pb-12"/>
 
 		<div class="post-content">
