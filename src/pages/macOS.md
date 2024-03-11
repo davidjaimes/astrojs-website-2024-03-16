@@ -100,7 +100,7 @@ Install command:
 bash Miniconda3-latest-MacOSX-arm64.sh
 ```
 environment.yml:
-```yml
+```yml title="environment.yml"
 name: arm64
 dependencies:
   - astropy
